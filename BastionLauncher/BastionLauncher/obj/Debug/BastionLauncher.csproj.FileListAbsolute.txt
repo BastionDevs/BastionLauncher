@@ -1,0 +1,10 @@
+C:\Users\skalf\source\repos\BastionLauncher\BastionLauncher\bin\Debug\BastionLauncher.exe.config
+C:\Users\skalf\source\repos\BastionLauncher\BastionLauncher\bin\Debug\BastionLauncher.exe
+C:\Users\skalf\source\repos\BastionLauncher\BastionLauncher\bin\Debug\BastionLauncher.pdb
+C:\Users\skalf\source\repos\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.csproj.AssemblyReference.cache
+C:\Users\skalf\source\repos\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.Form1.resources
+C:\Users\skalf\source\repos\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.Properties.Resources.resources
+C:\Users\skalf\source\repos\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.csproj.GenerateResource.cache
+C:\Users\skalf\source\repos\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.csproj.CoreCompileInputs.cache
+C:\Users\skalf\source\repos\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.exe
+C:\Users\skalf\source\repos\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.pdb
