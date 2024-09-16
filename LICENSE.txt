@@ -1,0 +1,53 @@
+Bastion General Software Licensing Policy
+Version 2.7 - Open Source Software
+
+1. Use of the Package
+1.1. General Usage
+
+The software in this package is freely available for use by any individual or organization, provided that all usage is strictly within the bounds of the law.
+This package should not be used in any manner that violates the Terms of Service (ToS) or End User License Agreement (EULA) of the platform on which it is intended to operate, whether that be an operating system, programming language, or specific use case.
+Malicious intent in the use of this package is strictly prohibited. This includes, but is not limited to, activities such as hacking, unauthorized data access, or any form of cyber attack.
+Users are encouraged to consult with the Author(s) of the package or the platform in question if they have any doubts about proper use. This ensures compliance and proper functionality.
+1.2. Credit
+
+Proper credit must always be given to the Author(s) of the package. This credit should be visible in any documentation, user interfaces, or distribution points where the package is used.
+2. Distribution of the Package
+2.1. Author Credit
+
+When distributing this package, either in its original form or as part of a larger work, it is mandatory to credit the Author(s).
+The credit should be prominent, such as in the main README file, documentation, or any public-facing materials related to the distribution.
+2.2. Commercial and Educational Use
+
+The package may be used in commercial settings, including situations where the distributor stands to gain financially, as well as for educational purposes.
+Prior to commercial use or distribution, the Author(s) must be consulted to discuss the terms and any potential compensation or acknowledgment.
+2.3. Modification and Redistribution
+
+If the package is modified or repurposed for distribution, the modified version must still credit the original Author(s) and clearly indicate that changes have been made.
+3. Using the Package in Another Project (Repackaging)
+3.1. Open Source Integration
+
+The package may be integrated into other open-source projects, provided that the Author(s) are credited for their original work.
+Users are encouraged to use the latest version of the package to minimize bugs and security vulnerabilities in their projects.
+3.2. Transparency
+
+If the package is used as a dependency or core component in another project, this must be clearly documented, with links to the original source and detailed information on how it is used.
+4. Forking the Package
+4.1. Permission and Credit
+
+Forking this package is allowed, but the Author(s) of the original package must be credited in any forked versions.
+The original source, such as the GitHub repository URL, must be prominently stated in the README or About section of the forked project.
+4.2. Public Availability
+
+Any forked versions of the package must be made publicly available under the same licensing terms, and the forked project should maintain a clear lineage back to the original.
+5. Contributing to the Project/Package
+5.1. Contribution Guidelines
+
+Contributions to this project/package are welcome and should follow the guidelines outlined in the CONTRIBUTING.md file included in the repository.
+Contributions must adhere to the coding standards, testing protocols, and documentation practices specified by the Author(s).
+5.2. Communication and Collaboration
+
+Contributors are encouraged to communicate with the Author(s) and other contributors to ensure that their changes align with the project's goals and direction.
+For significant changes or additions, contributors should seek approval from the Author(s) before proceeding.
+5.3. Intellectual Property
+
+By contributing to the project, contributors agree to transfer any intellectual property rights associated with their contributions to the Author(s) or the organization maintaining the project, as specified in the CONTRIBUTING.md file.
