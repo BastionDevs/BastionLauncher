@@ -1,5 +1,5 @@
 # The Bastion Minecraft Launcher Project
-![Java 8](https://img.shields.io/badge/Java-8-%23f89820?labelColor=%235382a1) ![Ely.by Approved](https://img.shields.io/badge/Ely.by-Approved-brightgreen) [![Bastion GLP License](https://img.shields.io/badge/Bastion-GSLP%20v2.7-blue)](license.txt) ![Free PALESTINE](https://img.shields.io/badge/Free-PALESTINE-darkgreen)<br>
+![Java 8](https://img.shields.io/badge/Java-8-%23f89820?labelColor=%235382a1) ![Ely.by Approved](https://img.shields.io/badge/Ely.by-Approved-brightgreen) [![Bastion GLP License](https://img.shields.io/badge/Bastion-GLP%20v2.7-blue)](LICENSE.txt) ![Free PALESTINE](https://img.shields.io/badge/Free-PALESTINE-darkgreen)<br>
 Bastion Launcher is an all-in-one Minecraft launcher in C#, supporting Ely.by.  
 
 ## Features
