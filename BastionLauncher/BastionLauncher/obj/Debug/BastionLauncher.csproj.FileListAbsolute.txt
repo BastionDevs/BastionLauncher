@@ -8,3 +8,29 @@ C:\Users\skalf\source\repos\BastionLauncher\BastionLauncher\obj\Debug\BastionLau
 C:\Users\skalf\source\repos\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.csproj.CoreCompileInputs.cache
 C:\Users\skalf\source\repos\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.exe
 C:\Users\skalf\source\repos\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.pdb
+C:\Users\skalf\Desktop\Aedan\Git\BastionLauncher\BastionLauncher\BastionLauncher\bin\Debug\BastionLauncher.exe.config
+C:\Users\skalf\Desktop\Aedan\Git\BastionLauncher\BastionLauncher\BastionLauncher\bin\Debug\BastionLauncher.exe
+C:\Users\skalf\Desktop\Aedan\Git\BastionLauncher\BastionLauncher\BastionLauncher\bin\Debug\BastionLauncher.pdb
+C:\Users\skalf\Desktop\Aedan\Git\BastionLauncher\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.csproj.AssemblyReference.cache
+C:\Users\skalf\Desktop\Aedan\Git\BastionLauncher\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.Form1.resources
+C:\Users\skalf\Desktop\Aedan\Git\BastionLauncher\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.Properties.Resources.resources
+C:\Users\skalf\Desktop\Aedan\Git\BastionLauncher\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.csproj.GenerateResource.cache
+C:\Users\skalf\Desktop\Aedan\Git\BastionLauncher\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.csproj.CoreCompileInputs.cache
+C:\Users\skalf\Desktop\Aedan\Git\BastionLauncher\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.exe
+C:\Users\skalf\Desktop\Aedan\Git\BastionLauncher\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.pdb
+C:\Users\skalf\Desktop\Aedan\Git\BastionLauncher\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.FormSplash.resources
+C:\Users\ndrwcube\Documents\Git Repositories\BastionLauncher\BastionLauncher\BastionLauncher\bin\Debug\BastionLauncher.exe.config
+C:\Users\ndrwcube\Documents\Git Repositories\BastionLauncher\BastionLauncher\BastionLauncher\bin\Debug\BastionLauncher.exe
+C:\Users\ndrwcube\Documents\Git Repositories\BastionLauncher\BastionLauncher\BastionLauncher\bin\Debug\BastionLauncher.pdb
+C:\Users\ndrwcube\Documents\Git Repositories\BastionLauncher\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.csproj.AssemblyReference.cache
+C:\Users\ndrwcube\Documents\Git Repositories\BastionLauncher\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.Form1.resources
+C:\Users\ndrwcube\Documents\Git Repositories\BastionLauncher\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.FormSplash.resources
+C:\Users\ndrwcube\Documents\Git Repositories\BastionLauncher\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.Properties.Resources.resources
+C:\Users\ndrwcube\Documents\Git Repositories\BastionLauncher\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.csproj.GenerateResource.cache
+C:\Users\ndrwcube\Documents\Git Repositories\BastionLauncher\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.csproj.CoreCompileInputs.cache
+C:\Users\ndrwcube\Documents\Git Repositories\BastionLauncher\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.exe
+C:\Users\ndrwcube\Documents\Git Repositories\BastionLauncher\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.pdb
+C:\Users\ndrwcube\Documents\Git Repositories\BastionLauncher\BastionLauncher\BastionLauncher\bin\Debug\Newtonsoft.Json.dll
+C:\Users\ndrwcube\Documents\Git Repositories\BastionLauncher\BastionLauncher\BastionLauncher\bin\Debug\Newtonsoft.Json.xml
+C:\Users\ndrwcube\Documents\Git Repositories\BastionLauncher\BastionLauncher\BastionLauncher\obj\Debug\BastionL.B308E5ED.Up2Date
+C:\Users\ndrwcube\Documents\Git Repositories\BastionLauncher\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.DlProgress.resources
