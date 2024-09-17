@@ -26,8 +26,8 @@ namespace BastionLauncher
             //Fonts
             LoadFonts();
 
-            //Load account configuration
-            GetAccounts();
+            //Load configuration
+            Util.GetConfig();
         }
 
         void LoadFonts()
@@ -62,11 +62,6 @@ namespace BastionLauncher
             progressBar1.Value += 5;
             label4.Font = new Font(pfc.Families[0], label4.Font.Size);
             progressBar1.Value += 5;
-        }
-
-        void GetAccounts()
-        {
-
         }
     }
 }

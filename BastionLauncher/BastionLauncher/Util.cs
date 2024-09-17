@@ -32,8 +32,12 @@ namespace BastionLauncher
         public static string JREGammaInstalled = "";
         public static string JREDeltaInstalled = "";
         public static string JRELegacyInstalled = "";
+        public static string JRESelected = "";
 
-        public void GetConfig()
+        //Accounts
+        public static string AccountSelected = "";
+
+        public static void GetConfig()
         {
             MinecraftDir = file.Read("GameDir", "Launcher");
 
@@ -42,14 +46,27 @@ namespace BastionLauncher
             JREGammaInstalled = file.Read("GammaInstalled", "JRE");
             JREDeltaInstalled = file.Read("DeltaInstalled", "JRE");
             JRELegacyInstalled = file.Read("LegacyInstalled", "JRE");
+            JRESelected = file.Read("SelectedJRE", "JRE");
 
             //user accounts
             LauncherUserProfiles = JObject.Parse(LauncherDir + @"\blauncher_profiles.json");
+            AccountSelected = LauncherUserProfiles["SelectedUser"].ToString();
+
         }
 
-        public void SetConfig()
+        public static void SetConfig()
         {
+            file.Write("GameDir", MinecraftDir, "Launcher");
 
+            file.Write("Location", JRELocation, "JRE");
+            file.Write("AlphaInstalled", JREAlphaInstalled, "JRE");
+            file.Write("GammaInstalled", JREGammaInstalled, "JRE");
+            file.Write("DeltaInstalled", JREDeltaInstalled, "JRE");
+            file.Write("LegacyInstalled", JRELegacyInstalled, "JRE");
+            file.Write("SelectedJRE", JRESelected, "JRE");
+
+            LauncherUserProfiles["SelectedUser"] = AccountSelected;
+            File.WriteAllText(LauncherDir + @"\blauncher_profiles.json", LauncherUserProfiles.ToString(Newtonsoft.Json.Formatting.Indented));
         }
     }
 }

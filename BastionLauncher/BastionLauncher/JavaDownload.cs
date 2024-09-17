@@ -14,6 +14,7 @@ namespace BastionLauncher
             switch (System.Environment.GetEnvironmentVariable("PROCESSOR_ARCHITECTURE"))
             {
                 case "AMD64":
+                    Download(Util.JREMasterList["windows-arm64"][javaversion][0]["manifest"]["url"].ToString(), Util.JRELocation + @"\" +javaversion);
                     break;
 
                 case "ARM64":
@@ -133,7 +134,7 @@ namespace BastionLauncher
                     processedCount++;
                     progressForm.progressBar.Value = processedCount;
 
-                    progressForm.Text = $"Downloading Java... [{processedCount}/{files.Count}]";
+                    progressForm.Text = $"Downloading Java Runtime... [{processedCount}/{files.Count}]";
 
                     // Allow UI to refresh
                     Application.DoEvents();
