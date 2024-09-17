@@ -37,7 +37,7 @@
             this.ClientSize = new System.Drawing.Size(382, 103);
             this.Name = "DlProgress";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Downloading... [0/0]";
+            this.Text = "Downloading... [0/0 Files]";
             this.ResumeLayout(false);
 
         }

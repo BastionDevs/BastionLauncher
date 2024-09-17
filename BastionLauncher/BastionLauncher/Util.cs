@@ -48,7 +48,6 @@ namespace BastionLauncher
             JRELegacyInstalled = file.Read("LegacyInstalled", "JRE");
             JRESelected = file.Read("SelectedJRE", "JRE");
 
-            System.Windows.Forms.MessageBox.Show(LauncherDir);
             //user accounts
             LauncherUserProfiles = JObject.Parse(File.ReadAllText(LauncherDir + @"\blauncher_profiles.json"));
             AccountSelected = LauncherUserProfiles["SelectedUser"].ToString();

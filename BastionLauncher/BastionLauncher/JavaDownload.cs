@@ -134,7 +134,7 @@ namespace BastionLauncher
                     processedCount++;
                     progressForm.progressBar.Value = processedCount;
 
-                    progressForm.Text = $"Downloading Java Runtime... [{processedCount}/{files.Count}]";
+                    progressForm.Text = $"Downloading Java Runtime... [{processedCount}/{files.Count} Files]";
 
                     // Allow UI to refresh
                     Application.DoEvents();
