@@ -14,5 +14,8 @@ Bastion Launcher is an all-in-one Minecraft launcher in C#, supporting Ely.by.
 
 - **.NET Framework 3.5** or higher
 
+## Contributing
+We need help with Microsoft authentication. Contact @_windows7\_ on Discord if interested.  
+
 ## License
-This project is licensed under the **Bastion General Licensing Policy 2.7**. See the [LICENSE](LICENSE.txt) file for details.
+This project is licensed under the **Bastion General Licensing Policy 2.7**. See the [LICENSE](LICENSE.txt) file for details.  
