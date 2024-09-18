@@ -24,6 +24,7 @@ namespace BastionLauncher
         private void FormSplash_Load(object sender, EventArgs e)
         {
             //Resources
+            label3.Text = "Loading resources...";
             System.Net.WebRequest request =System.Net.WebRequest.Create("https://i.pinimg.com/originals/3b/55/6e/3b556e51b4d45b581a2a65d93c25afe7.jpg");
             System.Net.WebResponse response = request.GetResponse();
             System.IO.Stream responseStream = response.GetResponseStream();
@@ -32,8 +33,17 @@ namespace BastionLauncher
             //Fonts
             LoadFonts();
 
-            //Load configuration
-            Util.GetConfig();
+            if (Environment.GetCommandLineArgs()[1] =="FIRSTRUN")
+            {
+                Util.FirstRun();
+                MessageBox.Show("Bastion Launcher has been configured and will now close. Please re-launch to continue.", "Bastion Launcher", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Application.Exit();
+            } else
+            {
+                //Load configuration
+                label3.Text = "Retrieving launcher configuration...";
+                Util.GetConfig();
+            }
         }
 
         void LoadFonts()

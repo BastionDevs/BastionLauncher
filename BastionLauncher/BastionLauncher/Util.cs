@@ -17,8 +17,6 @@ namespace BastionLauncher
         public static string LauncherDir = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
         public static string LauncherConfigFile = LauncherDir + @"\launcher.ini";
 
-        public static IniFile file = new IniFile(LauncherConfigFile);
-
         public static JObject JREMasterList = JObject.Parse(new WebClient().DownloadString("https://launchermeta.mojang.com/v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7210883d12871/all.json"));
 
         public static JObject LauncherUserProfiles = null;
@@ -39,6 +37,7 @@ namespace BastionLauncher
 
         public static void GetConfig()
         {
+            IniFile file = new IniFile(LauncherConfigFile);
             MinecraftDir = file.Read("GameDir", "Launcher");
 
             JRELocation = file.Read("Location", "JRE");
@@ -56,6 +55,7 @@ namespace BastionLauncher
 
         public static void SetConfig()
         {
+            IniFile file = new IniFile(LauncherConfigFile);
             file.Write("GameDir", MinecraftDir, "Launcher");
 
             file.Write("Location", JRELocation, "JRE");
@@ -67,6 +67,32 @@ namespace BastionLauncher
 
             LauncherUserProfiles["SelectedUser"] = AccountSelected;
             File.WriteAllText(LauncherDir + @"\blauncher_profiles.json", LauncherUserProfiles.ToString(Newtonsoft.Json.Formatting.Indented));
+        }
+
+        public static void FirstRun()
+        {
+            //Make Config
+            File.CreateText(LauncherDir + @"\launcher.ini");
+            MinecraftDir = LauncherDir+@"\.minecraft";
+            JRELocation = LauncherDir + @"\mojang-jre";
+            JREAlphaInstalled = "false";
+            JREGammaInstalled = "false";
+            JREDeltaInstalled = "false";
+            JRELegacyInstalled = "false";
+            JRESelected = "recommended";
+        }
+
+        public static void UpdateAccounts(string username, string type, string uuid, string accessToken, string clientToken)
+        {
+            var jobjUserStore = new JObject
+            {
+                { "type", type },
+                { "uuid", uuid },
+                { "accesstoken", accessToken },
+                { "clienttoken", clientToken }
+            };
+
+            LauncherUserProfiles["elyusers"][username] = jobjUserStore;
         }
     }
 }
