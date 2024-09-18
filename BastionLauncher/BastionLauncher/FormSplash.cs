@@ -23,6 +23,12 @@ namespace BastionLauncher
 
         private void FormSplash_Load(object sender, EventArgs e)
         {
+            //Resources
+            System.Net.WebRequest request =System.Net.WebRequest.Create("https://i.pinimg.com/originals/3b/55/6e/3b556e51b4d45b581a2a65d93c25afe7.jpg");
+            System.Net.WebResponse response = request.GetResponse();
+            System.IO.Stream responseStream = response.GetResponseStream();
+            this.BackgroundImage = new Bitmap(responseStream);
+
             //Fonts
             LoadFonts();
 
