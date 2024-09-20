@@ -94,5 +94,10 @@ namespace BastionLauncher
 
             LauncherUserProfiles["elyusers"][username] = jobjUserStore;
         }
+
+        public static void CheckOS()
+        {
+
+        }
     }
 }

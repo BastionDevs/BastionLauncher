@@ -34,3 +34,7 @@ C:\Users\ndrwcube\Documents\Git Repositories\BastionLauncher\BastionLauncher\Bas
 C:\Users\ndrwcube\Documents\Git Repositories\BastionLauncher\BastionLauncher\BastionLauncher\bin\Debug\Newtonsoft.Json.xml
 C:\Users\ndrwcube\Documents\Git Repositories\BastionLauncher\BastionLauncher\BastionLauncher\obj\Debug\BastionL.B308E5ED.Up2Date
 C:\Users\ndrwcube\Documents\Git Repositories\BastionLauncher\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.DlProgress.resources
+C:\Users\skalf\Desktop\Aedan\Git\BastionLauncher\BastionLauncher\BastionLauncher\bin\Debug\Newtonsoft.Json.dll
+C:\Users\skalf\Desktop\Aedan\Git\BastionLauncher\BastionLauncher\BastionLauncher\bin\Debug\Newtonsoft.Json.xml
+C:\Users\skalf\Desktop\Aedan\Git\BastionLauncher\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.DlProgress.resources
+C:\Users\skalf\Desktop\Aedan\Git\BastionLauncher\BastionLauncher\BastionLauncher\obj\Debug\BastionL.B308E5ED.Up2Date

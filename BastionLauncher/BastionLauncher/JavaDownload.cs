@@ -9,23 +9,41 @@ namespace BastionLauncher
 {
     internal class JavaDownload
     {
-        public void Download(string javaversion)
+        public void DownloadJava(string javaversion)
+        {
+            if (OSCompat(javaversion))
+            {
+
+            } else
+            {
+                MessageBox.Show("Required Java version is not compatible with your device!", "Bastion Launcher", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        bool OSCompat(string version)
         {
             switch (System.Environment.GetEnvironmentVariable("PROCESSOR_ARCHITECTURE"))
             {
                 case "AMD64":
-                    Download(Util.JREMasterList["windows-arm64"][javaversion][0]["manifest"]["url"].ToString(), Util.JRELocation + @"\" +javaversion);
-                    break;
+                    return true;
 
                 case "ARM64":
-                    break;
+                    if (version == "java-runtime-delta") { 
+                    return true; } else { return false; }
 
                 case "x86":
-                    break;
+                    if (version != "java-runtime-delta")
+                    {
+                        return true;
+                    }
+                    else { return false; }
+
+                default:
+                    return false;
             }
         }
 
-        public static void Download(string json, string basePath)
+        public static void DownloadFiles(string json, string basePath)
         {
             if (json == null)
             {
