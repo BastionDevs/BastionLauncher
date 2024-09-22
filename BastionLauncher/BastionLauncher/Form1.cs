@@ -40,6 +40,24 @@ namespace BastionLauncher
                 comboBox2.Items.Add("<Add an account to continue>");
             }
 
+            comboBox2.Items.Add("Manage accounts");comboBox2.Items.Clear();
+
+            comboBox1.Items.Clear();
+
+            // Populate ComboBox with player names
+            foreach (var launchprofile in Util.LauncherGameProfiles["profiles"].OfType<JProperty>())
+            {
+                comboBox1.Items.Add(launchprofile.Name);
+            }
+
+            // Remove "<Add an account to continue>" if users exist
+            if (comboBox1.Items.Count == 0)
+            {
+                // If no users exist, add the placeholder item back
+                comboBox1.Items.Add("Default");
+            }
+
+            comboBox1.Items.Add("Manage profiles");
             comboBox2.Items.Add("Manage accounts");
 
             comboBox1.SelectedIndex = 0;

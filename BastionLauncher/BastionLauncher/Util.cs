@@ -20,6 +20,7 @@ namespace BastionLauncher
         public static JObject JREMasterList = JObject.Parse(new WebClient().DownloadString("https://launchermeta.mojang.com/v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7210883d12871/all.json"));
 
         public static JObject LauncherUserProfiles = JObject.Parse(File.ReadAllText(LauncherDir + @"\blauncher_profiles.json"));
+        public static JObject LauncherGameProfiles = JObject.Parse(File.ReadAllText(LauncherDir + @"\blauncher_gameprofiles.json"));
 
         //Config
         //Launcher
