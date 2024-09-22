@@ -19,7 +19,28 @@ namespace BastionLauncher
 
         public static JObject JREMasterList = JObject.Parse(new WebClient().DownloadString("https://launchermeta.mojang.com/v1/products/java-runtime/2ec0cc96c44e5a76b9c8b7c39df7210883d12871/all.json"));
 
-        public static JObject LauncherUserProfiles = null;
+        //public static JObject LauncherUserProfiles = JObject.Parse(File.ReadAllText(LauncherDir + @"\blauncher_profiles.json"));
+        /* public static JObject LauncherUserProfiles = JObject.Parse(@"{
+                'elyusers': {
+                    'player123': {
+                        'type': 'classic',
+                        'uuid': 'playeruuid1',
+                        'accesstoken': 'mysecretaccesstoken',
+                        'clienttoken': 'mysecretclienttoken'
+                    },
+                    'player456': {
+                        'type': 'classic',
+                        'uuid': 'playeruuid2',
+                        'accesstoken': 'mysecretaccesstoken',
+                        'clienttoken': 'mysecretclienttoken'
+                    }
+                }
+            }"); */
+
+        public static JObject LauncherUserProfiles = JObject.Parse(@"{
+                'elyusers': {
+                }
+            }");
 
         //Config
         //Launcher
@@ -48,7 +69,6 @@ namespace BastionLauncher
             JRESelected = file.Read("SelectedJRE", "JRE");
 
             //user accounts
-            LauncherUserProfiles = JObject.Parse(File.ReadAllText(LauncherDir + @"\blauncher_profiles.json"));
             AccountSelected = LauncherUserProfiles["SelectedUser"].ToString();
 
         }

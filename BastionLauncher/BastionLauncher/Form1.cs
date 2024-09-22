@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,18 +20,28 @@ namespace BastionLauncher
 
         private void button3_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Are you sure that you want to quit?", "Bastion Launcher", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
-            if (dr == DialogResult.Yes) { Application.Exit(); }
-        }
-
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DialogResult dr = MessageBox.Show("Are you sure that you want to quit?", "Bastion Launcher", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button2);
-            e.Cancel = (dr == DialogResult.No);
+            Application.Exit();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            comboBox2.Items.Clear();
+
+            // Populate ComboBox with player names
+            foreach (var player in Util.LauncherUserProfiles["elyusers"].OfType<JProperty>())
+            {
+                comboBox2.Items.Add(player.Name);
+            }
+
+            // Remove "<Add an account to continue>" if users exist
+            if (comboBox2.Items.Count == 0)
+            {
+                // If no users exist, add the placeholder item back
+                comboBox2.Items.Add("<Add an account to continue>");
+            }
+
+            comboBox2.Items.Add("Manage accounts");
+
             comboBox1.SelectedIndex = 0;
             comboBox2.SelectedIndex = 0;
         }

@@ -33,16 +33,20 @@ namespace BastionLauncher
             //Fonts
             LoadFonts();
 
-            if (Environment.GetCommandLineArgs()[1] =="FIRSTRUN")
+            if (Environment.GetCommandLineArgs().Length > 1)
             {
-                Util.FirstRun();
-                MessageBox.Show("Bastion Launcher has been configured and will now close. Please re-launch to continue.", "Bastion Launcher", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Application.Exit();
-            } else
-            {
-                //Load configuration
-                label3.Text = "Retrieving launcher configuration...";
-                Util.GetConfig();
+                if (Environment.GetCommandLineArgs()[1] == "FIRSTRUN")
+                {
+                    Util.FirstRun();
+                    MessageBox.Show("Bastion Launcher has been configured and will now close. Please re-launch to continue.", "Bastion Launcher", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Application.Exit();
+                }
+                else
+                {
+                    //Load configuration
+                    label3.Text = "Retrieving launcher configuration...";
+                    Util.GetConfig();
+                }
             }
         }
 
@@ -78,6 +82,11 @@ namespace BastionLauncher
             progressBar1.Value += 5;
             label4.Font = new Font(pfc.Families[0], label4.Font.Size);
             progressBar1.Value += 5;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new Form1().Show();
         }
     }
 }
