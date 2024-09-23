@@ -1,0 +1,16 @@
+{
+  "elyusers": {
+    "CubeNotFound": {
+      "type": "classic",
+      "uuid": "playeruuid1",
+      "accesstoken": "mysecretaccesstoken",
+      "clienttoken": "mysecretclienttoken"
+    },
+    "HealerNotFound": {
+      "type": "classic",
+      "uuid": "playeruuid2",
+      "accesstoken": "mysecretaccesstoken",
+      "clienttoken": "mysecretclienttoken"
+    }
+  }
+}

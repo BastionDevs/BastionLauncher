@@ -1,0 +1,16 @@
+{
+  "profiles": {
+    "Default": {
+      "type": "classic",
+      "uuid": "playeruuid1",
+      "accesstoken": "mysecretaccesstoken",
+      "clienttoken": "mysecretclienttoken"
+    },
+    "bedwars profile": {
+      "type": "classic",
+      "uuid": "playeruuid2",
+      "accesstoken": "mysecretaccesstoken",
+      "clienttoken": "mysecretclienttoken"
+    }
+  }
+}

@@ -25,43 +25,65 @@ namespace BastionLauncher
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            comboBox2.Items.Clear();
 
-            // Populate ComboBox with player names
-            foreach (var player in Util.LauncherUserProfiles["elyusers"].OfType<JProperty>())
+            // Check if the "elyusers" token is null
+            JToken elyusersToken = Util.LauncherUserProfiles["elyusers"];
+
+            if (elyusersToken != null && elyusersToken.HasValues) // Check if "elyusers" exists and has players
             {
-                comboBox2.Items.Add(player.Name);
+                comboBox2.Items.Clear(); // Clear existing items first
+
+                foreach (JProperty player in elyusersToken) // Loop through each player
+                {
+                    comboBox2.Items.Add(player.Name); // Add player names to ComboBox
+                }
+
+                // Automatically select the first player if any exist
+                if (comboBox2.Items.Count > 0)
+                {
+                    comboBox2.SelectedIndex = 0; // Select the first item
+                }
             }
-
-            // Remove "<Add an account to continue>" if users exist
-            if (comboBox2.Items.Count == 0)
+            else
             {
-                // If no users exist, add the placeholder item back
+                // If no users exist, add the placeholder item "<Add an account to continue>"
+                comboBox2.Items.Clear();
                 comboBox2.Items.Add("<Add an account to continue>");
+                comboBox2.SelectedIndex = 0; // Select the placeholder
             }
 
-            comboBox2.Items.Add("Manage accounts");comboBox2.Items.Clear();
+            // Check if the "elyusers" token is null
+            JToken launchprofilesToken = Util.LauncherGameProfiles["profiles"];
 
-            comboBox1.Items.Clear();
-
-            // Populate ComboBox with player names
-            foreach (var launchprofile in Util.LauncherGameProfiles["profiles"].OfType<JProperty>())
+            if (launchprofilesToken != null && launchprofilesToken.HasValues) // Check if "elyusers" exists and has players
             {
-                comboBox1.Items.Add(launchprofile.Name);
+                comboBox1.Items.Clear(); // Clear existing items first
+
+                foreach (JProperty player in launchprofilesToken) // Loop through each player
+                {
+                    comboBox1.Items.Add(player.Name); // Add player names to ComboBox
+                }
+
+                // Automatically select the first player if any exist
+                if (comboBox1.Items.Count > 0)
+                {
+                    comboBox1.SelectedIndex = 0; // Select the first item
+                }
             }
-
-            // Remove "<Add an account to continue>" if users exist
-            if (comboBox1.Items.Count == 0)
+            else
             {
-                // If no users exist, add the placeholder item back
+                // If no users exist, add the placeholder item "<Add an account to continue>"
+                comboBox1.Items.Clear();
                 comboBox1.Items.Add("Default");
+                comboBox1.SelectedIndex = 0; // Select the placeholder
             }
 
-            comboBox1.Items.Add("Manage profiles");
-            comboBox2.Items.Add("Manage accounts");
+            pictureBox1.Load($"https://minotar.net/helm/{comboBox2.SelectedItem}/150.png");
+        }
 
-            comboBox1.SelectedIndex = 0;
-            comboBox2.SelectedIndex = 0;
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            pictureBox1.Load($"https://minotar.net/helm/{comboBox2.SelectedItem}/150.png");
         }
     }
 }
