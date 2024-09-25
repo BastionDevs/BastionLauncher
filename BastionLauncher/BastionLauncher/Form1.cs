@@ -25,12 +25,12 @@ namespace BastionLauncher
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
             // Check if the "elyusers" token is null
             JToken elyusersToken = Util.LauncherUserProfiles["elyusers"];
 
             if (elyusersToken != null && elyusersToken.HasValues) // Check if "elyusers" exists and has players
             {
+                comboBox2.Items.Add("= Ely.by Accounts = ");
                 comboBox2.Items.Clear(); // Clear existing items first
 
                 foreach (JProperty player in elyusersToken) // Loop through each player
@@ -74,16 +74,19 @@ namespace BastionLauncher
             {
                 // If no users exist, add the placeholder item "<Add an account to continue>"
                 comboBox1.Items.Clear();
-                comboBox1.Items.Add("Default");
+                comboBox1.Items.Add("<Add profiles to continue>");
                 comboBox1.SelectedIndex = 0; // Select the placeholder
             }
 
-            pictureBox1.Load($"https://minotar.net/helm/{comboBox2.SelectedItem}/150.png");
+            comboBox1.Items.Add("Manage profiles");
+            comboBox2.Items.Add("Manage accounts");
+
+            pictureBox1.Load($"https://minotar.net/helm/{comboBox2.SelectedItem}/100.png");
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            pictureBox1.Load($"https://minotar.net/helm/{comboBox2.SelectedItem}/150.png");
+            pictureBox1.Load($"https://minotar.net/helm/{comboBox2.SelectedItem}/100.png");
         }
     }
 }
