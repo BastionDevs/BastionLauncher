@@ -4,6 +4,7 @@ echo This tool will delete all .vs project folders.
 pause
 echo Deleting...
 rmdir BastionLauncher\.vs /s /q
+rmdir BastionLauncher\BastionLauncher\.vs /s /q
 echo.
 echo Done!
 pause
