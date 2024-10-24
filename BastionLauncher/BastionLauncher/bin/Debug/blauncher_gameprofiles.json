@@ -1,16 +1,14 @@
 {
   "profiles": {
     "Default": {
-      "type": "classic",
-      "uuid": "playeruuid1",
-      "accesstoken": "mysecretaccesstoken",
-      "clienttoken": "mysecretclienttoken"
+      "version": "1.21.2",
+      "rammb": "3072",
+      "jdk": "default"
     },
     "bedwars profile": {
-      "type": "classic",
-      "uuid": "playeruuid2",
-      "accesstoken": "mysecretaccesstoken",
-      "clienttoken": "mysecretclienttoken"
+      "version": "of1.8.9",
+      "rammb": "2048",
+      "jdk": "default"
     }
   }
 }
