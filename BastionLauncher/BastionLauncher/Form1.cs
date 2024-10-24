@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace BastionLauncher
 {
@@ -42,7 +43,7 @@ namespace BastionLauncher
                 // Automatically select the first player if any exist
                 if (comboBox2.Items.Count > 0)
                 {
-                    comboBox2.SelectedIndex = 0; // Select the first item
+                    comboBox2.SelectedIndex = 1; // Select the first item
                 }
             }
             else
@@ -91,9 +92,23 @@ namespace BastionLauncher
             if (comboBox2.SelectedItem.ToString() == "Manage accounts")
             {
                 new AccountManager().ShowDialog();
-            } else if (comboBox2.SelectedItem.ToString() != "= Ely.by Accounts =")
+            } else if (comboBox2.SelectedItem.ToString() != "= Ely.by Accounts =" || comboBox2.SelectedItem.ToString() != "= Microsoft Accounts =")
             {
                 pictureBox1.Load($"https://minotar.net/helm/{comboBox2.SelectedItem}/100.png");
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (comboBox2.SelectedItem.ToString() != "= Ely.by Accounts =" || comboBox2.SelectedItem.ToString() != "= Microsoft Accounts =" || comboBox2.SelectedItem.ToString() == "Manage accounts" || comboBox2.SelectedItem.ToString() == "<Add profiles to continue>")
+            {
+                JToken elyuser = Util.LauncherUserProfiles["elyusers"][comboBox2.SelectedItem];
+                MessageBox.Show(ElyAccounts.ValidateToken((string)elyuser["accesstoken"]).ToString());
+                //Ely.by account
+                if (comboBox2.Items.IndexOf(comboBox2.SelectedText) > comboBox2.Items.IndexOf("= Microsoft Accounts ="))
+                {
+                    MessageBox.Show(ElyAccounts.ValidateToken(Util.LauncherUserProfiles["elyusers"][comboBox2.SelectedItem]["accesstoken"].ToString()).ToString());
+                }
             }
         }
     }
