@@ -7,7 +7,7 @@ Bastion Launcher is an all-in-one Minecraft launcher in C#, supporting Ely.by.
 - **User Authentication**: Supports Microsoft (Premium) accounts.
 - **Ely.by Authentication**: Log in with an [Ely.by](https://ely.by) account.
 - **Mod & Texture Pack Downloader**: Easily download and manage mods and texture packs from online sources.
-- **Custom Profiles**: Create and manage game profiles with different settings.
+- **Game Profiles**: Create and manage game profiles with different settings.
 - **One-click Version Installer**: Directly install many different Minecraft clients and version.
 
 ### Requirements

@@ -3,8 +3,8 @@
     "CubeBoy123": {
       "type": "classic",
       "uuid": "7939cd3f-be65-41c6-8368-565f5d9458d1",
-      "accesstoken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiJ9.eyJpYXQiOjE3Mjk3NzU4MTEsImV4cCI6MTcyOTk0ODYxMSwic2NvcGUiOiJvYnRhaW5fb3duX2FjY291bnRfaW5mbyBtaW5lY3JhZnRfc2VydmVyX3Nlc3Npb24iLCJlbHktY2xpZW50LXRva2VuIjoibmlBVEUzYTJ2N1lRNGJ0YzEzVEZpTF9SRURCYWZKdXhNZi1BdU05MFBUaG5tTGJMUTFzQ3hRUFpCcHpaX3J3R04tblE1cEFqbWFBd1ViUGpBY2w0SkJ4LTA2Ql9VV08wOXFaV013Iiwic3ViIjoiZWx5fDM5NDYwMjkifQ.PgI6s8ic8vDGg09Fd_uTeBXItj4nxWdtTnA_CQQx95wLOBeVGVgxDFUFVro5FC1AFX5BeaaOlBR0loP5l3A0Gw",
-      "clienttoken": "0ba27394-18ac-4f7b-a9df-3d86815c04ce"
+      "accesstoken": "mysecretaccesstoken",
+      "clienttoken": "mysecretclienttoken"
     },
     "WZF": {
       "type": "classic",
