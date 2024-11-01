@@ -27,62 +27,7 @@ namespace BastionLauncher
         private void Form1_Load(object sender, EventArgs e)
         {
             pictureBox1.Size = new Size(100, 100);
-            // Check if the "elyusers" token is null
-            JToken elyusersToken = Util.LauncherUserProfiles["elyusers"];
-            JToken mojangusersToken = Util.LauncherUserProfiles["mojangusers"];
-
-            bool elyuserspresent;
-            bool mojanguserspresent;
-
-            comboBox2.Items.Clear();
-
-            if (elyusersToken != null && elyusersToken.HasValues) // Check if "elyusers" exists and has players
-            {
-                comboBox2.Items.Add("= Ely.by Accounts =");
-
-                foreach (JProperty player in elyusersToken) // Loop through each player
-                {
-                    comboBox2.Items.Add(player.Name); // Add player names to ComboBox
-                }
-
-                // Automatically select the first player if any exist
-                if (comboBox2.Items.Count > 0)
-                {
-                    comboBox2.SelectedIndex = 1; // Select the first item
-                }
-                elyuserspresent = true;
-            } else
-            {
-                elyuserspresent = false;
-            }
-
-            if (mojangusersToken != null && mojangusersToken.HasValues) // Check if "mojangusers" exists and has players
-            {
-                comboBox2.Items.Add("= Mojang/MS Accounts =");
-
-                foreach (JProperty player in mojangusersToken) // Loop through each player
-                {
-                    comboBox2.Items.Add(player.Name); // Add player names to ComboBox
-                }
-
-                // Automatically select the first player if any exist
-                if (comboBox2.Items.Count > 0)
-                {
-                    comboBox2.SelectedIndex = 1; // Select the first item
-                }
-                mojanguserspresent = true;
-            }
-            else
-            {
-                mojanguserspresent = false;
-            }
-            if (!elyuserspresent || !mojanguserspresent)
-            {
-                // If no users exist, add the placeholder item "<Add an account to continue>"
-                comboBox2.Items.Clear();
-                comboBox2.Items.Add("<Add an account to continue>");
-                comboBox2.SelectedIndex = 0; // Select the placeholder
-            }
+            RefreshAccountsList();
 
             // Check if the "elyusers" token is null
             JToken launchprofilesToken = Util.LauncherGameProfiles["profiles"];
@@ -117,11 +62,74 @@ namespace BastionLauncher
             pictureBox1.Load($"https://minotar.net/helm/{comboBox2.SelectedItem}/100.png");
         }
 
+        void RefreshAccountsList()
+        {
+            // Check if the "elyusers" token is null
+            JToken elyusersToken = Util.LauncherUserProfiles["elyusers"];
+            JToken mojangusersToken = Util.LauncherUserProfiles["mojangusers"];
+
+            bool elyuserspresent;
+            bool mojanguserspresent;
+
+            comboBox2.Items.Clear();
+
+            if (elyusersToken != null && elyusersToken.HasValues) // Check if "elyusers" exists and has players
+            {
+                comboBox2.Items.Add("= Ely.by Accounts =");
+
+                foreach (JProperty player in elyusersToken) // Loop through each player
+                {
+                    comboBox2.Items.Add(player.Name); // Add player names to ComboBox
+                }
+
+                // Automatically select the first player if any exist
+                if (comboBox2.Items.Count > 0)
+                {
+                    comboBox2.SelectedIndex = 1; // Select the first item
+                }
+                elyuserspresent = true;
+            }
+            else
+            {
+                elyuserspresent = false;
+            }
+
+            if (mojangusersToken != null && mojangusersToken.HasValues) // Check if "mojangusers" exists and has players
+            {
+                comboBox2.Items.Add("= Mojang/MS Accounts =");
+
+                foreach (JProperty player in mojangusersToken) // Loop through each player
+                {
+                    comboBox2.Items.Add(player.Name); // Add player names to ComboBox
+                }
+
+                // Automatically select the first player if any exist
+                if (comboBox2.Items.Count > 0)
+                {
+                    comboBox2.SelectedIndex = 1; // Select the first item
+                }
+                mojanguserspresent = true;
+            }
+            else
+            {
+                mojanguserspresent = false;
+            }
+            if (!elyuserspresent || !mojanguserspresent)
+            {
+                // If no users exist, add the placeholder item "<Add an account to continue>"
+                comboBox2.Items.Clear();
+                comboBox2.Items.Add("<Add an account to continue>");
+                comboBox2.SelectedIndex = 0; // Select the placeholder
+            }
+        }
+
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (comboBox2.SelectedItem.ToString() == "Manage accounts")
             {
                 new AccountManager().ShowDialog();
+                RefreshAccountsList();
+
             } else if (comboBox2.SelectedItem.ToString() != "= Ely.by Accounts =" && comboBox2.SelectedItem.ToString() != "= Mojang/MS Accounts =")
             {
                 pictureBox1.Load($"https://minotar.net/helm/{comboBox2.SelectedItem}/100.png");
