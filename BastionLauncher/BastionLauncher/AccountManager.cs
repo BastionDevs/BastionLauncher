@@ -21,6 +21,16 @@ namespace BastionLauncher
 
         private void AccountManager_Load(object sender, EventArgs e)
         {
+            RefreshUserList();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        void RefreshUserList()
+        {
             // Check if the "elyusers" token is null
             JToken elyusersToken = Util.LauncherUserProfiles["elyusers"];
             JToken mojangusersToken = Util.LauncherUserProfiles["mojangusers"];
