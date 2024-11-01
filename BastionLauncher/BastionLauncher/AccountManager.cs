@@ -26,7 +26,7 @@ namespace BastionLauncher
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            RefreshUserList();
         }
 
         void RefreshUserList()
