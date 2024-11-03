@@ -14,8 +14,36 @@ namespace BastionLauncher
 
         public static string PwdAuth(string username, string password, string clienttoken, bool requestuser)
         {
-            string resp = NetUtils.POSTReqJSON($"https://authserver.ely.by/auth/authenticate", "{\r\n  \"username\": \""+username+"\",\r\n  \"password\": \""+password+"\",\r\n  \"clientToken\": \""+clienttoken+"\",\r\n  \"requestUser\": \""+requestuser+"\"\r\n}");
-            if (!resp.Contains("{\r\n    \"error\": \"")) { return resp; } else { return "ERROR:"+resp; }
+            try
+            {
+                var httpWebRequest = (HttpWebRequest)WebRequest.Create("https://authserver.ely.by/auth/authenticate");
+                httpWebRequest.ContentType = "application/json";
+                httpWebRequest.Method = "POST";
+
+                using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
+                {
+                    streamWriter.Write("{\r\n  \"username\": \"" + username + "\",\r\n  \"password\": \"" + password + "\",\r\n  \"clientToken\": \"" + clienttoken + "\",\r\n  \"requestUser\": \"" + requestuser + "\"\r\n}");
+                }
+
+                var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                {
+                    return streamReader.ReadToEnd();
+                }
+            }
+            catch (WebException ex)
+            {
+                using (var errorResponse = (HttpWebResponse)ex.Response)
+                {
+                    using (var reader = new StreamReader(errorResponse.GetResponseStream()))
+                    {
+                        string error = reader.ReadToEnd();
+                        // Return or log error details along with status code
+                        Console.Write($"Error: {errorResponse.StatusCode}, Body: {error}");
+                        return error;
+                    }
+                }
+            }
         }
 
         public static string Refresh(string accesstoken)

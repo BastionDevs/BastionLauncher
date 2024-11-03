@@ -41,3 +41,4 @@ C:\Users\skalf\Desktop\Aedan\Git\BastionLauncher\BastionLauncher\BastionLauncher
 C:\Users\skalf\Desktop\Aedan\Git\BastionLauncher\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.AccountManager.resources
 C:\Users\ndrwcube\Documents\Git Repositories\BastionLauncher\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.AccountManager.resources
 C:\Users\ndrwcube\Documents\Git Repositories\BastionLauncher\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.ManageAccount.resources
+C:\Users\skalf\Desktop\Aedan\Git\BastionLauncher\BastionLauncher\BastionLauncher\obj\Debug\BastionLauncher.ManageAccount.resources

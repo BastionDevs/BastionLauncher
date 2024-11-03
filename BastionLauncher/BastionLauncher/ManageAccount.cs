@@ -37,5 +37,10 @@ namespace BastionLauncher
                 radioButton1.Checked = false;
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
