@@ -56,7 +56,6 @@ namespace BastionLauncher
             }
 
             comboBox1.Items.Add("Manage profiles");
-            comboBox2.Items.Add("Manage accounts");
 
             comboBox2.SelectedIndex = 1;
             pictureBox1.Load($"https://minotar.net/helm/{comboBox2.SelectedItem}/100.png");
@@ -121,6 +120,8 @@ namespace BastionLauncher
                 comboBox2.Items.Add("<Add an account to continue>");
                 comboBox2.SelectedIndex = 0; // Select the placeholder
             }
+
+            comboBox2.Items.Add("Manage accounts");
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
