@@ -73,7 +73,7 @@ namespace BastionLauncher
                 // Automatically select the first player if any exist
                 if (listBox1.Items.Count > 0)
                 {
-                    listBox1.SelectedIndex = 1; // Select the first item
+                    listBox1.SelectedIndex = 0; // Select the first item
                 }
                 mojanguserspresent = true;
             }
