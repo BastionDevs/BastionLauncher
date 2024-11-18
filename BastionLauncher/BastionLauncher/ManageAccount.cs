@@ -12,6 +12,7 @@ namespace BastionLauncher
 {
     public partial class ManageAccount : Form
     {
+        bool modify = false;
         public ManageAccount()
         {
             InitializeComponent();
@@ -31,6 +32,8 @@ namespace BastionLauncher
                 radioButton2.Checked = true;
                 radioButton1.Enabled = false;
             }
+            textBox1.Text = username;
+            modify = true;
         }
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
@@ -70,6 +73,21 @@ namespace BastionLauncher
                 {
                     MessageBox.Show("Credentials are valid!", "Bastion Launcher", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string clientToken = textBox1 + "-" + DateTime.Now.ToString("ddMMyyyyHmmss");
+            string accToken = ElyAccounts.PwdAuth(textBox1.Text, textBox2.Text, clientToken, true);
+            string refreshToken = "";
+
+            if (modify)
+            {
+                Util.ModifyAccount(textBox1.Text, textBox2.Text, refreshToken, clientToken);
+            } else
+            {
+                Util.CreateAccount(textBox1.Text, textBox1.Text, refreshToken, clientToken);
             }
         }
     }

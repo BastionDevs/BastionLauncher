@@ -99,5 +99,15 @@ namespace BastionLauncher
         {
 
         }
+
+        public static void ModifyAccount(string username, string accessToken, string refreshToken, string clientToken)
+        {
+
+        }
+
+        public static void CreateAccount(string username, string accessToken, string refreshToken, string clientToken)
+        {
+
+        }
     }
 }
