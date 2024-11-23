@@ -82,30 +82,21 @@ namespace BastionLauncher
             JRESelected = "recommended";
         }
 
-        public static void UpdateAccounts(string username, string type, string uuid, string accessToken, string clientToken)
+        public static void UpdateAccounts(string username, string type, string uuid, string accessToken, string refreshToken, string clientToken)
         {
-            var jobjUserStore = new JObject
+            var user = new JObject
             {
-                { "type", type },
+                { "type", "classic" },
                 { "uuid", uuid },
                 { "accesstoken", accessToken },
+                { "refreshtoken", refreshToken },
                 { "clienttoken", clientToken }
             };
 
-            LauncherUserProfiles["elyusers"][username] = jobjUserStore;
+            LauncherUserProfiles[type][username] = user;
         }
 
         public static void CheckOS()
-        {
-
-        }
-
-        public static void ModifyAccount(string username, string accessToken, string refreshToken, string clientToken)
-        {
-
-        }
-
-        public static void CreateAccount(string username, string accessToken, string refreshToken, string clientToken)
         {
 
         }

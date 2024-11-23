@@ -80,15 +80,9 @@ namespace BastionLauncher
         {
             string clientToken = textBox1 + "-" + DateTime.Now.ToString("ddMMyyyyHmmss");
             string accToken = ElyAccounts.PwdAuth(textBox1.Text, textBox2.Text, clientToken, true);
+            string uuid = "";
             string refreshToken = "";
-
-            if (modify)
-            {
-                Util.ModifyAccount(textBox1.Text, textBox2.Text, refreshToken, clientToken);
-            } else
-            {
-                Util.CreateAccount(textBox1.Text, textBox1.Text, refreshToken, clientToken);
-            }
+            Util.UpdateAccounts(textBox1.Text, "elyusers", uuid, accToken, refreshToken, clientToken);
         }
     }
 }
