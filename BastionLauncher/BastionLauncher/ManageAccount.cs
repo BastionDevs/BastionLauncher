@@ -13,6 +13,10 @@ namespace BastionLauncher
     public partial class ManageAccount : Form
     {
         bool modify = false;
+
+
+        bool accountTestValid = false;
+        string accLoginJSON = "";
         public ManageAccount()
         {
             InitializeComponent();
@@ -72,6 +76,9 @@ namespace BastionLauncher
                 else
                 {
                     MessageBox.Show("Credentials are valid!", "Bastion Launcher", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    accountTestValid = true;
+                    accLoginJSON = userlogin;
+
                 }
             }
         }
@@ -79,7 +86,7 @@ namespace BastionLauncher
         private void button1_Click(object sender, EventArgs e)
         {
             string clientToken = textBox1 + "-" + DateTime.Now.ToString("ddMMyyyyHmmss");
-            string accToken = ElyAccounts.PwdAuth(textBox1.Text, textBox2.Text, clientToken, true);
+            string accToken = "";
             string uuid = "";
             string refreshToken = "";
             Util.UpdateAccounts(textBox1.Text, "elyusers", uuid, accToken, refreshToken, clientToken);
