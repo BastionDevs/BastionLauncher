@@ -150,5 +150,10 @@ namespace BastionLauncher
                 }
             }
         }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Util.QuitLauncher();
+        }
     }
 }

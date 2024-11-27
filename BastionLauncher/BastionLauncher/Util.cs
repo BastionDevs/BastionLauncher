@@ -100,5 +100,10 @@ namespace BastionLauncher
         {
 
         }
+
+        public static void QuitLauncher()
+        {
+            SetConfig();
+        }
     }
 }
