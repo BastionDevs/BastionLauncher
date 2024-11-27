@@ -9,18 +9,20 @@ namespace BastionLauncher
 {
     internal class JavaDownload
     {
-        public void DownloadJava(string javaversion)
+        public static void DownloadJava(string javaversion)
         {
             if (OSCompat(javaversion))
             {
-
+                string json = Util.JREMasterList["windows-"+OSArch()][javaversion][0]["manifest"]["url"].ToString();
+                new WebClient().DownloadString(json);
+                MessageBox.Show(json);
             } else
             {
                 MessageBox.Show("Required Java version is not compatible with your device!", "Bastion Launcher", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        bool OSCompat(string version)
+        static bool OSCompat(string version)
         {
             switch (System.Environment.GetEnvironmentVariable("PROCESSOR_ARCHITECTURE"))
             {
@@ -28,7 +30,7 @@ namespace BastionLauncher
                     return true;
 
                 case "ARM64":
-                    if (version == "java-runtime-delta") { 
+                    if (version == "java-runtime-delta" || version == "java-runtime-gamma" || version == "java-runtime-gamma-snapshot") { 
                     return true; } else { return false; }
 
                 case "x86":
@@ -40,6 +42,24 @@ namespace BastionLauncher
 
                 default:
                     return false;
+            }
+        }
+
+        static string OSArch()
+        {
+            switch (System.Environment.GetEnvironmentVariable("PROCESSOR_ARCHITECTURE"))
+            {
+                case "AMD64":
+                    return "x64";
+
+                case "ARM64":
+                    return "arm64";
+
+                case "x86":
+                    return "x86";
+
+                default:
+                    return "x86";
             }
         }
 

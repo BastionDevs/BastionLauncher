@@ -88,5 +88,10 @@ namespace BastionLauncher
         {
             new Form1().Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            JavaDownload.DownloadJava("java-runtime-gamma");
+        }
     }
 }
